@@ -131,7 +131,7 @@
               <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="form-label" for="docUpload">Upload Document(s) <span style="color: var(--gold-accent); font-size: 0.75rem; font-weight: 400;">(Optional — Multiple files of any size)</span></label>
               <div class="file-upload-wrap" id="fileUploadWrap">
                 <input type="file" id="docUpload" name="attachment" class="file-input-hidden" accept="*" multiple onchange="handleFileSelect(this)">
@@ -146,17 +146,12 @@
                   <button type="button" class="file-remove-btn" onclick="removeFile()" aria-label="Remove file">✕</button>
                 </div>
               </div>
-            </div>
+            </div> -->
  
             <div class="form-group">
               <label class="form-label" for="enquiryMsg">Your Enquiry</label>
               <textarea id="enquiryMsg" name="message" class="form-textarea" placeholder="Please specify your query regarding Dr. Shivram Karanth Layout application..."></textarea>
             </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Send Enquiry to Bureau
-            </button>
 
             <!-- WhatsApp Alternative -->
             <div class="form-divider">
@@ -169,7 +164,6 @@
               </svg>
               Send Document via WhatsApp
             </a>
-
             <p class="whatsapp-hint">Opens WhatsApp · +91 9986074443 · You can attach your document directly in the chat</p>
 
             <a href="mailto:sanand@sandsprings.in?subject=DSKL%20Application%20Documents&body=Hello%20Bureau%2C%0A%0AI%20am%20enquiring%20about%20the%20Dr.%20Shivram%20Karanth%20Layout%20application.%20Please%20find%20attached%20my%20documents.%0A%0AApplicant%20Name%3A%20%0APhone%20Number%3A%20" class="btn-gmail" id="gmailLinkBtn">
@@ -178,7 +172,12 @@
               </svg>
               Send Document via Gmail / Email
             </a>
-            <p class="gmail-hint">Opens Gmail/Email Client · Send documents from your email directly to sanand@sandsprings.in</p>
+            <p class="gmail-hint">Opens Gmail/Email Client · Send documents from your email directly</p>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Enquiry to Bureau
+            </button>            
 
           </form>
         </div>
