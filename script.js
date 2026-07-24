@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const formData = new FormData(enquiryForm);
         formData.append('_subject', `New Dossier Enquiry from ${firstName} ${lastName}`);
+        formData.append('_replyto', email);
         formData.append('_captcha', 'false');
         formData.append('_template', 'table');
 
