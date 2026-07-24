@@ -218,6 +218,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5.5 Dynamic updating of WhatsApp and Gmail links based on entered info
+  const firstNameInput = document.getElementById('firstName');
+  const lastNameInput = document.getElementById('lastName');
+  const phoneInput = document.getElementById('phone');
+  const whatsappBtn = document.getElementById('whatsappLinkBtn');
+  const gmailBtn = document.getElementById('gmailLinkBtn');
+
+  function updateContactLinks() {
+    const fn = firstNameInput ? firstNameInput.value.trim() : '';
+    const ln = lastNameInput ? lastNameInput.value.trim() : '';
+    const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+    const fullName = `${fn} ${ln}`.trim() || 'Applicant';
+
+    // Update WhatsApp link
+    if (whatsappBtn) {
+      const waText = encodeURIComponent(`Hello Bureau, I would like to enquire about the Dr. Shivram Karanth Layout application.\nName: ${fullName}\nPhone: ${phoneVal}`);
+      whatsappBtn.href = `https://wa.me/9986074443?text=${waText}`;
+    }
+
+    // Update Gmail link
+    if (gmailBtn) {
+      const gmailSub = encodeURIComponent(`DSKL Application Documents - ${fullName}`);
+      const gmailBody = encodeURIComponent(`Hello Bureau,\n\nPlease find attached my documents for the Dr. Shivram Karanth Layout application.\n\nApplicant Name: ${fullName}\nPhone Number: ${phoneVal}`);
+      gmailBtn.href = `mailto:sanand@sandsprings.in?subject=${gmailSub}&body=${gmailBody}`;
+    }
+  }
+
+  if (firstNameInput) firstNameInput.addEventListener('input', updateContactLinks);
+  if (lastNameInput) lastNameInput.addEventListener('input', updateContactLinks);
+  if (phoneInput) phoneInput.addEventListener('input', updateContactLinks);
+
   // 6. Scroll Reveal Observer
   const observerOptions = {
     threshold: 0.15,

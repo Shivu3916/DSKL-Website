@@ -1865,3 +1865,42 @@ a.footer-contact-text:hover {
   letter-spacing: 0.02em;
 }
 
+.btn-gmail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  background: #D44638;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(212, 70, 56, 0.25);
+  margin-top: 0.8rem;
+}
+
+.btn-gmail:hover {
+  background: #b83a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(212, 70, 56, 0.35);
+}
+
+.gmail-hint {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+
