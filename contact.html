@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Enquiry — Dr. Shivram Karanth Layout Application Bureau</title>
+  <meta name="description" content="File a dossier enquiry with our specialists for Dr. Shivram Karanth Layout site applications in North Bengaluru. Direct bureau support.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">DS</div>
+        <div class="brand-text">
+          <span class="brand-title">Karanth Layout</span>
+          <span class="brand-subtitle">APPLICATION BUREAU</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu with Sector Dropdown -->
+      <ul class="nav-menu">
+        <li class="nav-item-dropdown">
+          <a href="portfolio.html" class="nav-link">
+            The Layout ▾
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Select Layout Sector</li>
+            <li><a href="sector1.html" class="dropdown-link"><span>Sector 1 </span> <span class="sector-code">01</span></a></li>
+            <li><a href="sector2.html" class="dropdown-link"><span>Sector 2 </span> <span class="sector-code">02</span></a></li>
+            <li><a href="sector3.html" class="dropdown-link"><span>Sector 3 </span> <span class="sector-code">03</span></a></li>
+            <li><a href="sector4.html" class="dropdown-link"><span>Sector 4 </span> <span class="sector-code">04</span></a></li>
+            <li><a href="sector5.html" class="dropdown-link"><span>Sector 5 </span> <span class="sector-code">05</span></a></li>
+            <li><a href="sector6.html" class="dropdown-link"><span>Sector 6 </span> <span class="sector-code">06</span></a></li>
+            <li><a href="sector7.html" class="dropdown-link"><span>Sector 7 </span> <span class="sector-code">07</span></a></li>
+            <li><a href="sector8.html" class="dropdown-link"><span>Sector 8 </span> <span class="sector-code">08</span></a></li>
+            <li><a href="sector9.html" class="dropdown-link"><span>Sector 9 </span> <span class="sector-code">09</span></a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">How We Assist</a></li>
+        <li><a href="procedure.html" class="nav-link">Procedure</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link active" style="color: var(--primary-green);">Enquiries</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn btn-primary">
+        Begin Application
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="index.html" class="nav-link">The Layout Overview</a>
+    <div class="mobile-sectors-accordion">
+      <div class="mobile-sectors-title">Select Sector (1 – 9)</div>
+      <div class="mobile-sectors-grid">
+        <a href="sector1.html" class="mobile-sector-btn">Sec 1</a>
+        <a href="sector2.html" class="mobile-sector-btn">Sec 2</a>
+        <a href="sector3.html" class="mobile-sector-btn">Sec 3</a>
+        <a href="sector4.html" class="mobile-sector-btn">Sec 4</a>
+        <a href="sector5.html" class="mobile-sector-btn">Sec 5</a>
+        <a href="sector6.html" class="mobile-sector-btn">Sec 6</a>
+        <a href="sector7.html" class="mobile-sector-btn">Sec 7</a>
+        <a href="sector8.html" class="mobile-sector-btn">Sec 8</a>
+        <a href="sector9.html" class="mobile-sector-btn">Sec 9</a>
+      </div>
+    </div>
+    <a href="about.html" class="nav-link">How We Assist</a>
+    <a href="procedure.html" class="nav-link">Procedure</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="nav-link">Enquiries</a>
+  </div>
+
+  <!-- Banner -->
+  <section style="padding-top: 150px; padding-bottom: 4rem; background-color: #F3EFE6; border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="badge-tag">Section VII · Dossier Filing Enquiry</div>
+      <h1 class="hero-title" style="font-size: clamp(2.8rem, 6vw, 5.2rem); margin-bottom: 1.5rem;">
+        File an Enquiry with<br><span class="line-2">Our Dossier Officers</span>
+      </h1>
+      <p class="hero-description" style="max-width: 780px;">
+        Connect directly with our document specialists for personalized category review, affidavit preparation, and application filing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact & Enquiry Form Section -->
+  <section class="section-contact" style="background-color: var(--bg-cream); border-top: none;">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Form Box -->
+        <div class="form-box">
+          <div class="badge-tag" style="margin-bottom: 1rem;">Bureau · Enquiry</div>
+          <h3 class="manifesto-card-title" style="margin-bottom: 1.5rem;">File a dossier enquiry with our specialists.</h3>
+
+          <form id="enquiryForm" action="https://formsubmit.co/ask@drshivramkaranthlayout.co.in" method="POST" enctype="multipart/form-data">
+            <!-- FormSubmit hidden config -->
+            <input type="hidden" name="_subject" value="New Dossier Enquiry — DSKL Bureau">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Thank you for your enquiry. A DSKL Bureau officer will contact you within 2 hours.">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input type="text" id="firstName" name="first_name" class="form-input" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="last_name" class="form-input" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter phone number" pattern="[0-9]{10}" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="docUpload">Upload Document(s) <span style="color: var(--gold-accent); font-size: 0.75rem; font-weight: 400;">(Optional — Multiple files of any size)</span></label>
+              <div class="file-upload-wrap" id="fileUploadWrap">
+                <input type="file" id="docUpload" name="attachment" class="file-input-hidden" accept="*" multiple onchange="handleFileSelect(this)">
+                <label for="docUpload" class="file-upload-label" id="fileUploadLabel">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <span class="file-upload-text" id="fileUploadText">Click to upload or drag &amp; drop your document(s) here</span>
+                  <span class="file-upload-hint">Aadhaar · PAN · Ration Card · Income Certificate · BDA receipt (Multiple files allowed)</span>
+                </label>
+                <div class="file-selected-badge" id="fileSelectedBadge" style="display:none;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span id="fileSelectedName">document.pdf</span>
+                  <button type="button" class="file-remove-btn" onclick="removeFile()" aria-label="Remove file">✕</button>
+                </div>
+              </div>
+            </div>
+ 
+            <div class="form-group">
+              <label class="form-label" for="enquiryMsg">Your Enquiry</label>
+              <textarea id="enquiryMsg" name="message" class="form-textarea" placeholder="Please specify your query regarding Dr. Shivram Karanth Layout application..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px;"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Enquiry to Bureau
+            </button>
+
+            <!-- WhatsApp Alternative -->
+            <div class="form-divider">
+              <span>or</span>
+            </div>
+
+            <a href="https://wa.me/9986074443?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20the%20Dr.%20Shivram%20Karanth%20Layout%20application." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Send Document via WhatsApp
+            </a>
+
+            <p class="whatsapp-hint">Opens WhatsApp · +91 9986074443 · You can attach your document directly in the chat</p>
+
+          </form>
+        </div>
+
+        <!-- Right: Contact Info & Bureau Address -->
+        <div class="contact-info-card">
+          <div class="info-block">
+            <h4 class="info-block-title">Bureau Office Coordinates</h4>
+            <p class="info-block-text">
+              Suite 402, North Avenue Chambers,<br>
+              Yelahanka Main Road, Bengaluru 560064<br>
+              Karnataka, India
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h4 class="info-block-title">Hotline & Operational Hours</h4>
+            <p class="info-block-text">
+              Direct Desk: +91 (080) 4920 1888<br>
+              Mon – Sat: 09:30 IST – 18:30 IST<br>
+              Email: dossier@karanthlayoutbureau.in
+            </p>
+          </div>
+
+          <div class="info-block" style="border-bottom: none;">
+            <h4 class="info-block-title">Compliance Protocol</h4>
+            <p class="info-block-text">
+              All filings are strictly handled per Karnataka BDA (Allotment of Sites) Rules, 1984. We preserve full chain-of-custody documentation for every applicant dossier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 class="footer-brand-title">Karanth Layout <span>Bureau</span></h3>
+          <p class="footer-desc">Independent assistance bureau for Dr. Shivram Karanth Layout site applications in North Bengaluru.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Pages Directory</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">The Layout Overview</a></li>
+            <li><a href="about.html">How We Assist (Manifesto)</a></li>
+            <li><a href="procedure.html">4-Step Procedure</a></li>
+            <li><a href="portfolio.html">Sectors 1 – 9 Portfolio</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="contact.html">File Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Dossier Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 1rem;">Receive alerts on BDA gazette notifications.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-gold">Join</button>
+          </form>
+        </div>
+
+        <!-- Contact Details Column -->
+        <div>
+          <h4 class="footer-links-title">Contact Bureau</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.14 2.22 2 2 0 012.14 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.28-.78a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+919876543210" class="footer-contact-text">+91 98765 43210</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:bureau@dsklayout.in" class="footer-contact-text">bureau@dsklayout.in</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="footer-contact-text">No. 12, 3rd Floor, Yelahanka New Town,<br>North Bengaluru — 560 064</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-contact-text">Mon – Sat: 10:00 am – 6:00 pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">© 2026 Dr. Shivram Karanth Layout Application Bureau (DSKL). All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919876543210?text=Hello%2C%20I%20want%20to%20enquire%20about%20DSKL%20Layout" target="_blank" rel="noopener noreferrer" class="floating-bureau-pill">
+    <span class="pill-dot"></span> Bureau · WhatsApp
+  </a>
+
+  <!-- Modal Popup -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="badge-tag" style="margin-bottom: 1rem;">Dossier Received</div>
+      <h3 class="manifesto-card-title" style="margin-bottom: 1rem;">Enquiry Registered Successfully</h3>
+      <p class="manifesto-card-desc" style="margin-bottom: 1.5rem;">
+        Your filing enquiry has been logged with reference code <strong id="modalDossierRef" style="color: var(--gold-accent);">DSKL-2026-9812</strong>. A dossier officer will review your information and reach out within 2 hours.
+      </p>
+      <button class="btn btn-primary" onclick="document.getElementById('modalOverlay').classList.remove('active');">
+        Acknowledge & Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Supabase JS Client Library -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

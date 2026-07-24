@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Shivram Karanth Layout — Application Bureau (DSKL)</title>
+  <meta name="description" content="A private assistance bureau for Dr. Shivram Karanth Layout BDA site applications in North Bengaluru. Independent, verifiable, unaffiliated dossier compilation.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+</head>
+<body>
+
+  <!-- Sticky Glass Header / Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">DS</div>
+        <div class="brand-text">
+          <span class="brand-title">Karanth Layout</span>
+          <span class="brand-subtitle">APPLICATION BUREAU</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu with Sector Dropdown -->
+      <ul class="nav-menu">
+        <li class="nav-item-dropdown">
+          <a href="index.html" class="nav-link active" style="color: var(--primary-green);">
+            The Layout ▾
+          </a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Select Layout Sector</li>
+            <li><a href="sector1.html" class="dropdown-link"><span>Sector 1 </span> <span class="sector-code">01</span></a></li>
+            <li><a href="sector2.html" class="dropdown-link"><span>Sector 2 </span> <span class="sector-code">02</span></a></li>
+            <li><a href="sector3.html" class="dropdown-link"><span>Sector 3 </span> <span class="sector-code">03</span></a></li>
+            <li><a href="sector4.html" class="dropdown-link"><span>Sector 4 </span> <span class="sector-code">04</span></a></li>
+            <li><a href="sector5.html" class="dropdown-link"><span>Sector 5 </span> <span class="sector-code">05</span></a></li>
+            <li><a href="sector6.html" class="dropdown-link"><span>Sector 6 </span> <span class="sector-code">06</span></a></li>
+            <li><a href="sector7.html" class="dropdown-link"><span>Sector 7 </span> <span class="sector-code">07</span></a></li>
+            <li><a href="sector8.html" class="dropdown-link"><span>Sector 8 </span> <span class="sector-code">08</span></a></li>
+            <li><a href="sector9.html" class="dropdown-link"><span>Sector 9 </span> <span class="sector-code">09</span></a></li>
+          </ul>
+        </li>
+        <li><a href="about.html" class="nav-link">How We Assist</a></li>
+        <li><a href="procedure.html" class="nav-link">Procedure</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Enquiries</a></li>
+      </ul>
+
+      <!-- Primary CTA -->
+      <a href="contact.html" class="btn btn-primary">
+        Begin Application 
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="index.html" class="nav-link">The Layout Overview</a>
+    <div class="mobile-sectors-accordion">
+      <div class="mobile-sectors-title">Select Sector (1 – 9)</div>
+      <div class="mobile-sectors-grid">
+        <a href="portfolio.html?sector=1" class="mobile-sector-btn">Sec 1</a>
+        <a href="portfolio.html?sector=2" class="mobile-sector-btn">Sec 2</a>
+        <a href="portfolio.html?sector=3" class="mobile-sector-btn">Sec 3</a>
+        <a href="portfolio.html?sector=4" class="mobile-sector-btn">Sec 4</a>
+        <a href="portfolio.html?sector=5" class="mobile-sector-btn">Sec 5</a>
+        <a href="portfolio.html?sector=6" class="mobile-sector-btn">Sec 6</a>
+        <a href="portfolio.html?sector=7" class="mobile-sector-btn">Sec 7</a>
+        <a href="portfolio.html?sector=8" class="mobile-sector-btn">Sec 8</a>
+        <a href="portfolio.html?sector=9" class="mobile-sector-btn">Sec 9</a>
+      </div>
+    </div>
+    <a href="about.html" class="nav-link">How We Assist</a>
+    <a href="procedure.html" class="nav-link">Procedure</a>
+    <a href="portfolio.html" class="nav-link">Portfolio</a>
+    <a href="faq.html" class="nav-link">FAQ</a>
+    <a href="contact.html" class="nav-link">Enquiries</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-header-meta">
+        <div class="badge-tag">
+          Bureau · Dossier # DSKL/25
+        </div>
+        <div class="meta-code">
+          FILE ONCE. FILE WELL.
+        </div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-1">Dr. Shivram</span>
+        <span class="line-2">Karanth Layout</span>
+      </h1>
+
+      <p class="hero-description">
+        A generational layout in North Bengaluru.<br>
+        An application that deserves a bureau.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">
+          Begin Application
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="about.html" class="btn btn-outline">
+          How We Assist
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Stats Row -->
+    <div class="container hero-stats-row">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">3,546</div>
+          <div class="stat-label">Acres Notified</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">17</div>
+          <div class="stat-label">North Bengaluru Villages</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24,000+</div>
+          <div class="stat-label">Sites Planned</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">1,240</div>
+          <div class="stat-label">Applicants We've Assisted</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Overview Section -->
+  <section class="section-editorial">
+    <div class="container">
+      <div class="badge-tag">
+        Overview · Bureau Overview
+      </div>
+
+      <div class="editorial-grid">
+        <div class="editorial-left">
+          <h2 class="editorial-quote">
+            North Bengaluru's premier <span>generational layout.</span>
+          </h2>
+          <p class="hero-description" style="margin-top: 1.5rem; font-size: 1.15rem;">
+            Spanning parts of Yelahanka, Doddaballapur Road, and 17 adjoining villages, Dr. Shivram Karanth Layout represents the Bengaluru Development Authority's landmark residential masterplan.
+          </p>
+          <div style="margin-top: 2rem;">
+            <a href="about.html" class="btn btn-outline">Read Bureau Charter &rarr;</a>
+          </div>
+        </div>
+
+        <div class="editorial-right">
+          <div class="manifesto-card" style="border-top: 1px solid var(--border-color);">
+            <div class="manifesto-num">01</div>
+            <div>
+              <h3 class="manifesto-card-title">Generational Scale & Infrastructure</h3>
+              <p class="manifesto-card-desc">Designed with 60ft to 100ft arterial roads, integrated rainwater harvesting, smart grid power lines, and preserved green belts across all sectors 1 to 9.</p>
+            </div>
+          </div>
+          <div class="manifesto-card">
+            <div class="manifesto-num">02</div>
+            <div>
+              <h3 class="manifesto-card-title">Meticulous Dossier Compilation</h3>
+              <p class="manifesto-card-desc">We convert complex BDA Gazette requirements into a streamlined, error-free application packet optimized for your specific eligibility slab.</p>
+            </div>
+          </div>
+          <div class="manifesto-card">
+            <div class="manifesto-num">03</div>
+            <div>
+              <h3 class="manifesto-card-title">End-to-End Tracking</h3>
+              <p class="manifesto-card-desc">From initial document verification to official portal submission and allotment list updates, our bureau stands with you at every milestone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Large Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <h3 class="footer-brand-title">Karanth Layout <span>Bureau</span></h3>
+          <p class="footer-desc">
+            Independent assistance bureau for Dr. Shivram Karanth Layout site applications in North Bengaluru. File once, file well.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Pages Directory</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">The Layout Overview</a></li>
+            <li><a href="about.html">How We Assist (Manifesto)</a></li>
+            <li><a href="procedure.html">4-Step Procedure</a></li>
+            <li><a href="portfolio.html">Sectors 1 – 9 Portfolio</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
+            <li><a href="contact.html">File Enquiry</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-links-title">Dossier Updates</h4>
+          <p class="footer-desc" style="margin-bottom: 1rem;">
+            Receive notification alerts on BDA gazette updates, allotment draw dates, and category adjustments.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Bureau Dossier updates.');">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-gold" style="padding: 0.85rem 1.2rem;">Join</button>
+          </form>
+        </div>
+
+        <!-- Contact Details Column -->
+        <div>
+          <h4 class="footer-links-title">Contact Bureau</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.14 2.22 2 2 0 012.14 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.28-.78a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:+919876543210" class="footer-contact-text">+91 98765 43210</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:bureau@dsklayout.in" class="footer-contact-text">bureau@dsklayout.in</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="footer-contact-text">No. 12, 3rd Floor, Yelahanka New Town,<br>North Bengaluru — 560 064</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="footer-contact-text">Mon – Sat: 10:00 am – 6:00 pm</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Dr. Shivram Karanth Layout Application Bureau (DSKL). All rights reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;" class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Assistance</a>
+          <a href="#">BDA Gazette Citation</a>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        Disclaimer: We are a private, independent assistance bureau. We do not sell BDA sites, promise allotments, or alter government seniority lists. We ensure your paperwork is flawless, your category is optimal, and your submission is on the official record per regulations.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Badge -->
+  <a href="contact.html" class="floating-bureau-pill">
+    <span class="pill-dot"></span>
+    Bureau · WhatsApp
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
