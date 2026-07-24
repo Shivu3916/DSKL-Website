@@ -125,22 +125,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (enquiryForm) {
     enquiryForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
       const submitBtn = enquiryForm.querySelector('[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Enquiry to Bureau';
       if (submitBtn) {
-        submitBtn.textContent = 'Saving & Sending...';
+        submitBtn.innerHTML = 'Sending Enquiry & Documents...';
         submitBtn.style.opacity = '0.7';
+        submitBtn.disabled = true;
       }
 
-      // 1. Save user info to Supabase Database (if configured)
+      const firstName = document.getElementById('firstName')?.value || '';
+      const lastName = document.getElementById('lastName')?.value || '';
+      const email = document.getElementById('email')?.value || '';
+      const phone = document.getElementById('phone')?.value || '';
+      const category = document.getElementById('category')?.value || '';
+      const message = document.getElementById('enquiryMsg')?.value || '';
+
+      // 1. Save user info to Supabase Database
       if (supabaseClient) {
         try {
-          const firstName = document.getElementById('firstName')?.value || '';
-          const lastName = document.getElementById('lastName')?.value || '';
-          const email = document.getElementById('email')?.value || '';
-          const phone = document.getElementById('phone')?.value || '';
-          const category = document.getElementById('category')?.value || '';
-          const message = document.getElementById('enquiryMsg')?.value || '';
-
           await supabaseClient
             .from('enquiries')
             .insert([
@@ -157,6 +161,45 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log('User info saved to Supabase successfully.');
         } catch (err) {
           console.error('Supabase Save Error:', err);
+        }
+      }
+
+      // 2. Send email with documents via FormSubmit AJAX
+      try {
+        const formData = new FormData(enquiryForm);
+        formData.append('_subject', `New Dossier Enquiry from ${firstName} ${lastName}`);
+        formData.append('_captcha', 'false');
+        formData.append('_template', 'table');
+
+        const response = await fetch('https://formsubmit.co/ajax/sanand@sandsprings.in', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await response.json();
+        console.log('FormSubmit Response:', data);
+
+        // 3. Show Success Modal with Reference Code
+        const randomNum = Math.floor(1000 + Math.random() * 9000);
+        if (modalDossierRef) {
+          modalDossierRef.textContent = `DSKL-2026-${randomNum}`;
+        }
+        if (modalOverlay) {
+          modalOverlay.classList.add('active');
+        }
+
+        // Reset form and file upload preview
+        enquiryForm.reset();
+        if (typeof removeFile === 'function') removeFile();
+
+      } catch (err) {
+        console.error('Email Dispatch Error:', err);
+        alert('Enquiry registered in database. If you experience email delay, please click "Send Document via WhatsApp" for instant submission.');
+      } finally {
+        if (submitBtn) {
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.style.opacity = '1';
+          submitBtn.disabled = false;
         }
       }
     });
