@@ -237,11 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsappBtn.href = `https://wa.me/9986074443?text=${waText}`;
     }
 
-    // Update Gmail link
+    // Update Gmail link — opens Gmail in browser, not Outlook
     if (gmailBtn) {
       const gmailSub = encodeURIComponent(`DSKL Application Documents - ${fullName}`);
       const gmailBody = encodeURIComponent(`Hello Bureau,\n\nPlease find attached my documents for the Dr. Shivram Karanth Layout application.\n\nApplicant Name: ${fullName}\nPhone Number: ${phoneVal}`);
-      gmailBtn.href = `mailto:sanand@sandsprings.in?subject=${gmailSub}&body=${gmailBody}`;
+      gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=sanand%40sandsprings.in&su=${gmailSub}&body=${gmailBody}`;
     }
   }
 
