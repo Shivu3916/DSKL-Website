@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
       <a href="index.html" class="brand-logo"><div class="brand-logo-icon">DS</div><div class="brand-text"><span class="brand-title">Karanth Layout</span><span class="brand-subtitle">APPLICATION BUREAU</span></div></a>
       <ul class="nav-menu">
         <li class="nav-item-dropdown">
-          <a href="portfolio.html" class="nav-link active" style="color: var(--primary-green);">The Layout ▾</a>
+          <a class="nav-link active" style="color: var(--primary-green);">The Layout ▾</a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Select Layout Sector</li>
             <li><a href="sector1.html" class="dropdown-link"><span>Sector 1 </span> <span class="sector-code">01</span></a></li>
@@ -28,11 +28,10 @@
             <li><a href="sector9.html" class="dropdown-link"><span>Sector 9 </span> <span class="sector-code">09</span></a></li>
           </ul>
         </li>
-        <li><a href="about.html" class="nav-link">How We Assist</a></li>
-        <li><a href="procedure.html" class="nav-link">Procedure</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="procedure.html" class="nav-link">How we Assist</a></li>
+        <li><a href="about.html" class="nav-link">Announcement</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="contact.html" class="nav-link">Enquiries</a></li>
+        <li><a href="contact.html" class="nav-link">Reach us</a></li>
       </ul>
       <a href="contact.html" class="btn btn-primary">Begin Application <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
@@ -49,60 +48,114 @@
     <div class="container">
       <nav class="sector-nav-breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><a href="portfolio.html">Sectors</a><span class="sep">›</span><span>Sector 5</span></nav>
       <div class="sector-badge">Sector 05 · BDA Gazette Notified</div>
-      <h1 class="sector-detail-title">Sector 5<br><em>Civic Amenities</em></h1>
-      <p class="sector-detail-subtitle">A comprehensively serviced sector with BDA-mandated schools, hospitals, and community halls within walking distance, alongside Byalakere Lake buffer and PRR-1 Transport Zone connectivity to the ring road network.</p>
+      <h1 class="sector-detail-title">Sector 5</h1>
     </div>
   </section>
 
+  <!-- Sector Content -->
   <section class="sector-content-section">
     <div class="container">
-      <div class="sector-layout-grid">
+      <div class="sector-layout-container">
+
+        <div class="sector-structure-table-wrap">
+          <div class="sector-structure-table-title">Plot Distribution · Sector 5</div>
+          <h3 class="sector-structure-table-heading">Sector 5 — Site Structure &amp; Plot Count</h3>
+          <div class="cost-table-wrapper" style="margin-top:0;">
+            <table class="sector-struct-table">
+              <thead>
+                <tr>
+                  <th>Dimensions (ft)</th>
+                  <th>Area (sq. ft)</th>
+                  <th>Dimensions (m)</th>
+                  <th>Area (sq. m)</th>
+                  <th>Plot Size (Mts)</th>
+                  <th>No. of Plots</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>20 × 30</td><td>600 sq.ft</td><td>6 × 9</td><td>54 m²</td><td>6×9</td><td>489</td></tr>
+                <tr><td>30 × 40</td><td>1,200 sq.ft</td><td>9 × 12</td><td>108 m²</td><td>9×12</td><td>788</td></tr>
+                <tr><td>30 × 50</td><td>1,500 sq.ft</td><td>9 × 15</td><td>135 m²</td><td>9×15</td><td>328</td></tr>
+                <tr><td>40 × 60</td><td>2,400 sq.ft</td><td>12 × 18</td><td>216 m²</td><td>12×18</td><td>390</td></tr>
+                <tr><td>50 × 80</td><td>4,000 sq.ft</td><td>15 × 24</td><td>360 m²</td><td>15×24</td><td>71</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top: Centered Map Image -->
         <div class="sector-map-wrap">
           <img src="assets/images/sector5_map.jpg" alt="Sector 5 Civic Amenities — BDA Master Plan Map">
           <div class="sector-map-caption">BDA Master Plan · Sector 05 · Civic Amenities</div>
         </div>
-        <div class="sector-info-panels">
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Villages Covered</div>
-            <ul class="sector-bullet-list">
-              <li>Byalakere Village & Gramathana Area</li>
-              <li>Kalathammanahalli Survey Zone</li>
-              <li>Mediagrahara Buffer Settlement</li>
-              <li>Proposed PRR-1 Transport Corridor Zone</li>
-            </ul>
+
+        <!-- Bottom: 2-Column Info Grid (3 on left, 3 on right) -->
+        <div class="sector-info-grid">
+
+          <!-- Left Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Villages</div>
+              <ul class="sector-bullet-list">
+                <li>Byalakere</li>
+                <li>Kasagattapura</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Entry Points</div>
+              <ul class="sector-bullet-list">
+                <li>Bangalore Business Corridor</li>
+                <li>Internal 150 Feet Road</li>
+                <li>Internal 100 Feet Road</li>
+                <li>Hesaraghatta Road</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Close to Areas</div>
+              <ul class="sector-bullet-list">
+                <li>Byalakere</li>
+                <li>Vidyaranyapura</li>
+                <li>MS Palya</li>
+              </ul>
+            </div>
           </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Entry Points</div>
-            <ul class="sector-bullet-list">
-              <li>PRR-1 (Peripheral Ring Road) — Primary Access Highway</li>
-              <li>Byalakere Lake Road — Southern Entry</li>
-              <li>AOL Boundary Service Road — Eastern Gate</li>
-            </ul>
+
+          <!-- Right Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Sector Highlights</div>
+              <ul class="sector-bullet-list">
+                <li>Large BDA Complex</li>
+                <li>Large Commercial Parcels for Auctions</li>
+                <li>Electric Substation</li>
+                <li>Rajiv Gandhi Housing Development</li>
+                <li>Byalakere Lake</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Institutions within 4 kms</div>
+              <ul class="sector-bullet-list">
+                <li>Lakshya Career Academy PU College</li>
+                <li>RASHTROTTHANA VIDYA KENDRA</li>
+                <li>Sambhram Institute of Technology</li>
+                <li>EuroKids Preschool</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Recreation Points</div>
+              <ul class="sector-bullet-list">
+                <li>MALLIGE COLLEGE OF NURSING</li>
+                <li>La Vida Leisure</li>
+                <li>JD Venue and Leisure</li>
+                <li>Samaya Venue and Leisure</li>
+              </ul>
+            </div>
           </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Close To</div>
-            <ul class="sector-bullet-list">
-              <li>Byalakere Lake (within AOL boundary) — 1.2 km</li>
-              <li>PRR-1 Transport Hub (proposed) — adjacent</li>
-              <li>Sector 4 Eco Sanctuary boundary — directly connected</li>
-              <li>Proposed BMRCL Yelahanka-Airport Metro Line — 4 km</li>
-              <li>Kempegowda International Airport — 21 km</li>
-            </ul>
-          </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Each Sector Highlights</div>
-            <ul class="sector-bullet-list">
-              <li>BDA-reserved civic amenity plots (schools, hospitals)</li>
-              <li>PRR-1 ring road frontage — supreme connectivity</li>
-              <li>Byalakere Lake protected buffer — natural boundary</li>
-              <li>High residential plot count — 2,500+ approved sites</li>
-              <li>Integrated commercial nodes on PRR frontage</li>
-              <li>Community park and sports ground within sector</li>
-              <li>Multi-modal transport hub planned within 2 km</li>
-            </ul>
-          </div>
-          <div style="margin-top: 1rem;"><a href="contact.html" class="btn btn-primary">Apply for Sector 5 →</a></div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -135,3 +188,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

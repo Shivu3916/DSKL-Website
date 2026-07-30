@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,7 +23,7 @@
 
       <ul class="nav-menu">
         <li class="nav-item-dropdown">
-          <a href="portfolio.html" class="nav-link active" style="color: var(--primary-green);">
+          <a class="nav-link active" style="color: var(--primary-green);">
             The Layout ▾
           </a>
           <ul class="dropdown-menu">
@@ -39,11 +39,10 @@
             <li><a href="sector9.html" class="dropdown-link"><span>Sector 9 </span> <span class="sector-code">09</span></a></li>
           </ul>
         </li>
-        <li><a href="about.html" class="nav-link">How We Assist</a></li>
-        <li><a href="procedure.html" class="nav-link">Procedure</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="procedure.html" class="nav-link">How we Assist</a></li>
+        <li><a href="about.html" class="nav-link">Announcement</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="contact.html" class="nav-link">Enquiries</a></li>
+        <li><a href="contact.html" class="nav-link">Reach us</a></li>
       </ul>
 
       <a href="contact.html" class="btn btn-primary">
@@ -92,9 +91,8 @@
         <span>Sector 1</span>
       </nav>
       <div class="sector-badge">Sector 01 · BDA Gazette Notified</div>
-      <h1 class="sector-detail-title">Sector 1<br><em>Yelahanka Vista</em></h1>
+      <h1 class="sector-detail-title">Sector 1</h1>
       <p class="sector-detail-subtitle">
-        Prime residential sector offering 50×80 villa plots along tree-lined 80ft avenues with underground cabling, rainwater harvesting ducts, and immediate proximity to Yelahanka New Town.
       </p>
     </div>
   </section>
@@ -102,65 +100,127 @@
   <!-- Sector Content -->
   <section class="sector-content-section">
     <div class="container">
-      <div class="sector-layout-grid">
+      <div class="sector-layout-container">
 
-        <!-- Left: Sector Map Image -->
+        <div class="sector-structure-table-wrap">
+          <div class="sector-structure-table-title">Plot Distribution · Sector 1</div>
+          <h3 class="sector-structure-table-heading">Sector 1 — Site Structure & Plot Count</h3>
+          <div class="cost-table-wrapper" style="margin-top:0;">
+            <table class="sector-struct-table">
+              <thead>
+                <tr>
+                  <th>Dimensions (ft)</th>
+                  <th>Area (sq. ft)</th>
+                  <th>Dimensions (m)</th>
+                  <th>Area (sq. m)</th>
+                  <th>Plot Size (Mts)</th>
+                  <th>No. of Plots</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20 × 30</td><td>600 sq.ft</td><td>6 × 9</td><td>54 m²</td><td>6×9</td><td>531</td>
+                </tr>
+                <tr>
+                  <td>30 × 40</td><td>1,200 sq.ft</td><td>9 × 12</td><td>108 m²</td><td>9×12</td><td>2226</td>
+                </tr>
+                <tr>
+                  <td>30 × 50</td><td>1,500 sq.ft</td><td>9 × 15</td><td>135 m²</td><td>9×15</td><td>636</td>
+                </tr>
+                <tr>
+                  <td>40 × 60</td><td>2,400 sq.ft</td><td>12 × 18</td><td>216 m²</td><td>12×18</td><td>459</td>
+                </tr>
+                <tr>
+                  <td>50 × 80</td><td>4,000 sq.ft</td><td>15 × 24</td><td>360 m²</td><td>15×24</td><td>23</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Top: Centered Map Image -->
         <div class="sector-map-wrap">
           <img src="assets/images/sector1_map.jpg" alt="Sector 1 Yelahanka Vista — BDA Master Plan Map">
-          <div class="sector-map-caption">BDA Master Plan · Sector 01 · Yelahanka Vista</div>
+          <div class="sector-map-caption">BDA Master Plan · Sector 01 </div>
         </div>
 
-        <!-- Right: Info Panels -->
-        <div class="sector-info-panels">
+        <!-- Bottom: 2-Column Info Grid (3 on left, 3 on right) -->
+        <div class="sector-info-grid">
 
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Villages Covered</div>
-            <ul class="sector-bullet-list">
-              <li>Yelahanka Hobli Village</li>
-              <li>Jala Hobli Boundary Zone</li>
-              <li>Bagalur Revenue Survey Area</li>
-              <li>Avalahalli Peripheral Zone</li>
-            </ul>
+          <!-- Left Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Villages</div>
+              <ul class="sector-bullet-list">
+                <li>Ramagondanahalli</li>
+                <li>Avalahalli</li>
+                <li>Lakshmipura</li>
+                <li>Harohalli</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Entry Points</div>
+              <ul class="sector-bullet-list">
+                <li>Bangalore Business Corridor</li>
+                <li>Doddaballapur Main Road</li>
+                <li>Attur Layout 60 feet road</li>
+                <li>Internal 60 Feet Road</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Close to Areas</div>
+              <ul class="sector-bullet-list">
+                <li>Yelahanka</li>
+                <li>Doddaballapur Main Road</li>
+                <li>Bangalore Business Corridor</li>
+                <li>Attur Layout</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Entry Points</div>
-            <ul class="sector-bullet-list">
-              <li>NH-44 (Bengaluru–Hyderabad Highway) — Main Gate</li>
-              <li>Yelahanka New Town Junction — Secondary Access</li>
-              <li>Doddaballapur Road Service Lane — East Entry</li>
-            </ul>
-          </div>
+          <!-- Right Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Sector Highlights</div>
+              <ul class="sector-bullet-list">
+                <li>BDA High Rise Development</li>
+                <li>Large Bus Terminal</li>
+                <li>Rajiv Gandhi Housing Development</li>
+                <li>Ramagondanahalli Lake</li>
+                <li>Attur Lake</li>
+                <li>Animal Husbandry and Defence Land</li>
+              </ul>
+            </div>
 
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Close To</div>
-            <ul class="sector-bullet-list">
-              <li>Yelahanka Railway Station — 2.4 km</li>
-              <li>Kempegowda International Airport — 22 km</li>
-              <li>Hebbal Flyover & ORR Junction — 14 km</li>
-              <li>Columbia Asia Hospital — 6 km</li>
-              <li>Delhi Public School North — 3.1 km</li>
-            </ul>
-          </div>
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Institutions within 4 kms</div>
+              <ul class="sector-bullet-list">
+                <li>Nitte Meenakshi Institute of Technology</li>
+                <li>BMS Institute of Technology</li>
+                <li>Ramakrishna Ayurvedic Hospital and College</li>
+                <li>Orchids International School</li>
+                <li>EuroKids Preschool</li>
+                <li>Presidency School</li>
+                <li>Nagarjuna Vidyaniketan</li>
+              </ul>
+            </div>
 
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Each Sector Highlights</div>
-            <ul class="sector-bullet-list">
-              <li>50×80 ft premium villa plots — BDA Gazette notified</li>
-              <li>80-ft wide arterial roads with storm-water drainage</li>
-              <li>Underground electrical cabling throughout the sector</li>
-              <li>Dedicated rainwater harvesting ducts on all roads</li>
-              <li>Central park & children's play zone within sector</li>
-              <li>Walking and cycling trail network along green spine</li>
-              <li>High applicant seniority zone — early draw probability</li>
-            </ul>
-          </div>
-
-          <div style="margin-top: 1rem;">
-            <a href="contact.html" class="btn btn-primary">Apply for Sector 1 →</a>
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Recreation Points</div>
+              <ul class="sector-bullet-list">
+                <li>Ramanashree California Resort</li>
+                <li>D-Mart</li>
+                <li>Clarion Bangalore</li>
+                <li>THE FRENCH TREATY</li>
+                <li>People's Tree Hospital</li>
+                <li>Sparsh Hospital Yelahanka</li>
+              </ul>
+            </div>
           </div>
 
         </div>
+
       </div>
     </div>
   </section>
@@ -256,3 +316,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

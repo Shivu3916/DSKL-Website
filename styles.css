@@ -1352,24 +1352,17 @@ a.footer-contact-text:hover {
 
 /* Sector Content Layout */
 .sector-content-section {
-  padding: 5rem 0;
+  padding: 4rem 0 5rem;
 }
 
-.sector-layout-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
-  align-items: start;
+.sector-layout-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-@media (min-width: 900px) {
-  .sector-layout-grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 5rem;
-  }
-}
-
-/* Sector Map Image */
+/* Centered Map Image at Top */
 .sector-map-wrap {
   position: relative;
   border-radius: 8px;
@@ -1377,6 +1370,9 @@ a.footer-contact-text:hover {
   box-shadow: 0 20px 60px rgba(14, 46, 31, 0.15);
   border: 1px solid var(--border-color);
   background: #f0ece3;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto 3.5rem auto;
 }
 
 .sector-map-wrap img {
@@ -1386,7 +1382,7 @@ a.footer-contact-text:hover {
 }
 
 .sector-map-wrap:hover img {
-  transform: scale(1.02);
+  transform: scale(1.015);
 }
 
 .sector-map-caption {
@@ -1394,7 +1390,7 @@ a.footer-contact-text:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(14, 46, 31, 0.85), transparent);
+  background: linear-gradient(to top, rgba(14, 46, 31, 0.88), transparent);
   padding: 1.5rem 1.2rem 1.2rem;
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -1404,8 +1400,23 @@ a.footer-contact-text:hover {
   color: rgba(255,255,255,0.9);
 }
 
-/* Sector Info Panels */
-.sector-info-panels {
+/* 2-Column Info Grid (3 panels left, 3 panels right) */
+.sector-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem 4rem;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sector-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.sector-info-col {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1432,7 +1443,7 @@ a.footer-contact-text:hover {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.3rem;
 }
 
 .sector-bullet-list li {
@@ -1442,7 +1453,7 @@ a.footer-contact-text:hover {
   font-family: var(--font-sans);
   font-size: 0.925rem;
   color: var(--text-dark);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .sector-bullet-list li::before {
@@ -1903,4 +1914,577 @@ a.footer-contact-text:hover {
   margin-bottom: 1rem;
 }
 
+/* ==========================================================================
+   Procedure Page: High-End Luxury Editorial Design System
+   ========================================================================== */
 
+.proc-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(200, 169, 107, 0.3);
+}
+
+.proc-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.proc-stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  line-height: 1.1;
+}
+
+.proc-stat-lbl {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+/* Luxury Procedure Block Cards */
+.proc-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.8rem 3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 40px rgba(14, 46, 31, 0.04);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.proc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green), var(--gold-accent));
+}
+
+.proc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(14, 46, 31, 0.08);
+  border-color: rgba(200, 169, 107, 0.4);
+}
+
+.proc-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.proc-card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.proc-num-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.proc-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.proc-card-tag {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  background: #FAF7EF;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(200, 169, 107, 0.3);
+}
+
+/* 4-Step What We Do Grid */
+.proc-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.proc-step-box {
+  background: #FAF7EF;
+  border-radius: 10px;
+  padding: 1.6rem 1.5rem;
+  border: 1px solid rgba(200, 169, 107, 0.2);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.proc-step-box:hover {
+  background: #F4EFE2;
+  border-color: var(--gold-accent);
+}
+
+.proc-step-num {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold-accent);
+  margin-bottom: 0.6rem;
+}
+
+.proc-step-heading {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.proc-step-desc {
+  font-family: var(--font-sans);
+  font-size: 0.86rem;
+  color: var(--text-dark);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* EMD Comparison Cards */
+.emd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.emd-box {
+  border-radius: 10px;
+  padding: 1.8rem;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+}
+
+.emd-box.highlight {
+  background: linear-gradient(145deg, #0E2E1F, #16402C);
+  color: #ffffff;
+  border: none;
+}
+
+.emd-box.highlight .emd-title { color: #ffffff; }
+.emd-box.highlight .emd-percent { color: #E5C378; }
+.emd-box.highlight .emd-desc { color: rgba(255, 255, 255, 0.85); }
+
+.emd-title {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.emd-percent {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.emd-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Allotment Priority Cards */
+.priority-ladder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.priority-card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  background: #FAF7EF;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-green);
+}
+
+.priority-card.secondary {
+  border-left-color: var(--gold-accent);
+}
+
+.priority-rank {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  line-height: 1;
+  min-width: 45px;
+}
+
+.priority-info h4 {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 0.4rem;
+}
+
+.priority-example {
+  margin-top: 0.6rem;
+  background: #ffffff;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: 1px dashed var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+/* Styled Financial Table */
+.cost-table-wrapper {
+  overflow-x: auto;
+  margin: 1.8rem 0;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.cost-table th {
+  background: var(--primary-green);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1.1rem 1.1rem;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cost-table th:last-child {
+  border-right: none;
+}
+
+.cost-table td {
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.cost-table tr:nth-child(even) td {
+  background: #FAF7EF;
+}
+
+.cost-table tr:hover td {
+  background: #F2ECDC;
+}
+
+.dim-pill {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background: var(--primary-green);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 4px;
+}
+
+.total-highlight {
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.ews-notice-banner {
+  background: linear-gradient(135deg, #FAF7EF, #F4EFE2);
+  border-left: 5px solid var(--gold-accent);
+  padding: 1.6rem 2rem;
+  border-radius: 0 10px 10px 0;
+  margin-top: 2rem;
+}
+
+.ews-notice-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ews-notice-text {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+
+
+/* ==========================================================================
+   ANNOUNCEMENT CARDS — about.html
+   ========================================================================== */
+
+.announcement-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .announcement-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.announcement-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: var(--transition-smooth);
+  box-shadow: 0 2px 16px rgba(14,46,31,0.06);
+}
+
+.announcement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(14,46,31,0.14);
+  border-color: var(--gold-accent);
+}
+
+.announcement-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background: #1a1a1a;
+}
+
+.announcement-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.announcement-card:hover .announcement-card-img {
+  transform: scale(1.04);
+}
+
+.announcement-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14,46,31,0.85) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.announcement-card:hover .announcement-card-overlay {
+  opacity: 1;
+}
+
+.announcement-dl-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold-accent);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 50px;
+  letter-spacing: 0.03em;
+}
+
+.announcement-card-body {
+  padding: 1.5rem 1.8rem 1.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.announcement-card-date {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+}
+
+.announcement-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  line-height: 1.3;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.announcement-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.announcement-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-top: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   SECTOR STRUCTURE TABLE — sector pages
+   ========================================================================== */
+
+.sector-structure-table-wrap {
+  margin-top: 0;
+  /* border-top: 1px solid var(--border-color); */
+  padding-top: 0;
+}
+
+.sector-structure-table-title {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  margin-bottom: 0.8rem;
+}
+
+.sector-structure-table-heading {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin-bottom: 1.2rem;
+}
+
+.sector-struct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(14,46,31,0.07);
+}
+
+.sector-struct-table thead tr {
+  background: var(--primary-green);
+  color: #fff;
+}
+
+.sector-struct-table thead th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.sector-struct-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.sector-struct-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.sector-struct-table tbody tr:hover {
+  background: rgba(14,46,31,0.04);
+}
+
+.sector-struct-table tbody td {
+  padding: 0.8rem 1rem;
+  color: var(--text-dark);
+  background: #fff;
+}
+
+.sector-struct-table tbody td:first-child {
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.sector-struct-table tbody td:last-child {
+  font-weight: 700;
+  color: var(--gold-accent);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .sector-struct-table {
+    font-size: 0.78rem;
+  }
+  .sector-struct-table thead th,
+  .sector-struct-table tbody td {
+    padding: 0.65rem 0.6rem;
+  }
+}

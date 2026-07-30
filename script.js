@@ -218,9 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5.5 Dynamic updating of WhatsApp and Gmail links based on entered info
+  // 5.5 Dynamic updating of WhatsApp and Gmail links + validation before sending
   const firstNameInput = document.getElementById('firstName');
   const lastNameInput = document.getElementById('lastName');
+  const emailInput = document.getElementById('email');
   const phoneInput = document.getElementById('phone');
   const whatsappBtn = document.getElementById('whatsappLinkBtn');
   const gmailBtn = document.getElementById('gmailLinkBtn');
@@ -245,9 +246,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Validate that details are filled before opening WhatsApp or Gmail
+  function validateBeforeSend(e) {
+    const fn = firstNameInput ? firstNameInput.value.trim() : '';
+    const ln = lastNameInput ? lastNameInput.value.trim() : '';
+    const em = emailInput ? emailInput.value.trim() : '';
+    const ph = phoneInput ? phoneInput.value.trim() : '';
+
+    if (!fn || !ln || !em || !ph) {
+      e.preventDefault();
+
+      // Show inline warning below the button
+      let warning = document.getElementById('sendWarningMsg');
+      if (!warning) {
+        warning = document.createElement('p');
+        warning.id = 'sendWarningMsg';
+        warning.style.cssText = 'color: #c0392b; font-size: 0.78rem; font-family: var(--font-sans); margin-top: 0.5rem; text-align: center; font-weight: 600; letter-spacing: 0.02em;';
+        e.currentTarget.insertAdjacentElement('afterend', warning);
+      }
+      warning.textContent = '⚠ Please fill in First Name, Last Name, Email and Phone Number above before sending.';
+
+      // Highlight missing fields
+      if (!fn && firstNameInput) firstNameInput.style.borderColor = '#c0392b';
+      if (!ln && lastNameInput) lastNameInput.style.borderColor = '#c0392b';
+      if (!em && emailInput) emailInput.style.borderColor = '#c0392b';
+      if (!ph && phoneInput) phoneInput.style.borderColor = '#c0392b';
+
+      // Auto-clear warning after 4 seconds
+      setTimeout(() => {
+        if (warning) warning.textContent = '';
+        if (firstNameInput) firstNameInput.style.borderColor = '';
+        if (lastNameInput) lastNameInput.style.borderColor = '';
+        if (emailInput) emailInput.style.borderColor = '';
+        if (phoneInput) phoneInput.style.borderColor = '';
+      }, 4000);
+    }
+  }
+
   if (firstNameInput) firstNameInput.addEventListener('input', updateContactLinks);
   if (lastNameInput) lastNameInput.addEventListener('input', updateContactLinks);
   if (phoneInput) phoneInput.addEventListener('input', updateContactLinks);
+
+  if (whatsappBtn) whatsappBtn.addEventListener('click', validateBeforeSend);
+  if (gmailBtn) gmailBtn.addEventListener('click', validateBeforeSend);
 
   // 6. Scroll Reveal Observer
   const observerOptions = {

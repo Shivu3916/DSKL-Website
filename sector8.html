@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
       <a href="index.html" class="brand-logo"><div class="brand-logo-icon">DS</div><div class="brand-text"><span class="brand-title">Karanth Layout</span><span class="brand-subtitle">APPLICATION BUREAU</span></div></a>
       <ul class="nav-menu">
         <li class="nav-item-dropdown">
-          <a href="portfolio.html" class="nav-link active" style="color: var(--primary-green);">The Layout ▾</a>
+          <a class="nav-link active" style="color: var(--primary-green);">The Layout ▾</a>
           <ul class="dropdown-menu">
             <li class="dropdown-header">Select Layout Sector</li>
             <li><a href="sector1.html" class="dropdown-link"><span>Sector 1 </span> <span class="sector-code">01</span></a></li>
@@ -28,11 +28,10 @@
             <li><a href="sector9.html" class="dropdown-link"><span>Sector 9 </span> <span class="sector-code">09</span></a></li>
           </ul>
         </li>
-        <li><a href="about.html" class="nav-link">How We Assist</a></li>
-        <li><a href="procedure.html" class="nav-link">Procedure</a></li>
-        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="procedure.html" class="nav-link">How we Assist</a></li>
+        <li><a href="about.html" class="nav-link">Announcement</a></li>
         <li><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li><a href="contact.html" class="nav-link">Enquiries</a></li>
+        <li><a href="contact.html" class="nav-link">Reach us</a></li>
       </ul>
       <a href="contact.html" class="btn btn-primary">Begin Application <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
@@ -49,60 +48,117 @@
     <div class="container">
       <nav class="sector-nav-breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><a href="portfolio.html">Sectors</a><span class="sep">›</span><span>Sector 8</span></nav>
       <div class="sector-badge">Sector 08 · BDA Gazette Notified</div>
-      <h1 class="sector-detail-title">Sector 8<br><em>Executive Enclave</em></h1>
-      <p class="sector-detail-subtitle">The layout's largest sector by plot count — 4,584 approved residential plots across Ganigarahalli, Somashettihalli, and Chikkabesvara Lake boundaries, with AOL boundary protections and the largest Ganigarahall Lake buffer in the master plan.</p>
+      <h1 class="sector-detail-title">Sector 8</h1>
     </div>
   </section>
 
   <section class="sector-content-section">
     <div class="container">
-      <div class="sector-layout-grid">
+      <div class="sector-layout-container">
+
+        <div class="sector-structure-table-wrap">
+          <div class="sector-structure-table-title">Plot Distribution · Sector 8</div>
+          <h3 class="sector-structure-table-heading">Sector 8 — Site Structure &amp; Plot Count</h3>
+          <div class="cost-table-wrapper" style="margin-top:0;">
+            <table class="sector-struct-table">
+              <thead>
+                <tr>
+                  <th>Dimensions (ft)</th>
+                  <th>Area (sq. ft)</th>
+                  <th>Dimensions (m)</th>
+                  <th>Area (sq. m)</th>
+                  <th>Plot Size (Mts)</th>
+                  <th>No. of Plots</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>20 × 30</td><td>600 sq.ft</td><td>6 × 9</td><td>54 m²</td><td>6×9</td><td>745</td></tr>
+                <tr><td>30 × 40</td><td>1,200 sq.ft</td><td>9 × 12</td><td>108 m²</td><td>9×12</td><td>1897</td></tr>
+                <tr><td>30 × 50</td><td>1,500 sq.ft</td><td>9 × 15</td><td>135 m²</td><td>9×15</td><td>414</td></tr>
+                <tr><td>40 × 60</td><td>2,400 sq.ft</td><td>12 × 18</td><td>216 m²</td><td>12×18</td><td>402</td></tr>
+                <tr><td>50 × 80</td><td>4,000 sq.ft</td><td>15 × 24</td><td>360 m²</td><td>15×24</td><td>73</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Top: Centered Map Image -->
         <div class="sector-map-wrap">
-          <img src="assets/images/sector8_map.jpg" alt="Sector 8 Executive Enclave — BDA Master Plan Map">
-          <div class="sector-map-caption">BDA Master Plan · Sector 08 · Executive Enclave</div>
+          <img src="assets/images/sector8_map.jpg" alt="Sector 8 — BDA Master Plan Map">
+          <div class="sector-map-caption">BDA Master Plan · Sector 08 </div>
         </div>
-        <div class="sector-info-panels">
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Villages Covered</div>
-            <ul class="sector-bullet-list">
-              <li>Ganigarahalli Village & Gramathana Area</li>
-              <li>Somashettihalli Southern Block</li>
-              <li>Chikkabesvara Lake Boundary Zone</li>
-              <li>Veerasandra Buffer Settlement Area</li>
-            </ul>
+
+        <!-- Bottom: 2-Column Info Grid (3 on left, 3 on right) -->
+        <div class="sector-info-grid">
+
+          <!-- Left Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Villages</div>
+              <ul class="sector-bullet-list">
+                <li>Ganigarahalli</li>
+                <li>Kempapura</li>
+                <li>Somashettihalli</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Entry Points</div>
+              <ul class="sector-bullet-list">
+                <li>Bangalore Business Corridor</li>
+                <li>Internal 100 Feet Road</li>
+                <li>Internal 100 Feet Road One More</li>
+                <li>Hesaraghatta Road</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Close to Areas</div>
+              <ul class="sector-bullet-list">
+                <li>Chikkabanavara</li>
+                <li>Hesaraghatta Road</li>
+                <li>Abbigere</li>
+              </ul>
+            </div>
           </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Entry Points</div>
-            <ul class="sector-bullet-list">
-              <li>Ganigarahalli Main Road — Primary Entry Gate</li>
-              <li>Chikkabesvara Lake Road — Southern Access</li>
-              <li>AOL Boundary Service Road — Western Gate</li>
-            </ul>
+
+          <!-- Right Column (3 Panels) -->
+          <div class="sector-info-col">
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Sector Highlights</div>
+              <ul class="sector-bullet-list">
+                <li>300 feet access</li>
+                <li>Large BDA Complex</li>
+                <li>Ganigarahalli lake</li>
+                <li>Chikkabanavara Railway Station</li>
+                <li>Very large STP</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Institutions within 4 kms</div>
+              <ul class="sector-bullet-list">
+                <li>R.R Institute of Technology</li>
+                <li>National Public School</li>
+                <li>Sapthagiri Medical College and Hospital</li>
+                <li>Acharya Institute of Technology</li>
+                <li>Dhanawantri Group of Institutions</li>
+                <li>NRR Hospital</li>
+              </ul>
+            </div>
+
+            <div class="sector-info-panel">
+              <div class="sector-panel-label">Recreation Points</div>
+              <ul class="sector-bullet-list">
+                <li>Hawk High Coastal Resto - Chikkabanavara</li>
+                <li>Himalaya Dhaba Cafe and Restaurant</li>
+                <li>DMart Hesaraghatta Road</li>
+                <li>GO Happy Hyper Market</li>
+                <li>Zazzy Bar & Kitchen</li>
+              </ul>
+            </div>
           </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Close To</div>
-            <ul class="sector-bullet-list">
-              <li>Ganigarahall Lake — within sector boundary</li>
-              <li>Chikkabesvara Lake — at southern boundary</li>
-              <li>Proposed STRR Outer Ring Road — 3 km</li>
-              <li>Sector 9 Kalathammanahalli — directly north</li>
-              <li>Kempegowda International Airport — 17 km</li>
-            </ul>
-          </div>
-          <div class="sector-info-panel">
-            <div class="sector-panel-label">Each Sector Highlights</div>
-            <ul class="sector-bullet-list">
-              <li>Largest sector by plot count — 4,584 approved sites</li>
-              <li>Ganigarahall Lake — protected buffer within sector</li>
-              <li>Chikkabesvara Lake — southern natural boundary</li>
-              <li>AOL Boundary guaranteed open green buffer</li>
-              <li>9×12 plots — 45.17% of total allocation</li>
-              <li>STRR road frontage plots on southern boundary</li>
-              <li>Veerasandra Burial Ground heritage preservation zone</li>
-            </ul>
-          </div>
-          <div style="margin-top: 1rem;"><a href="contact.html" class="btn btn-primary">Apply for Sector 8 →</a></div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -135,3 +191,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
