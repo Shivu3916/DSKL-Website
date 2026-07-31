@@ -139,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const lastName = document.getElementById('lastName')?.value || '';
       const email = document.getElementById('email')?.value || '';
       const phone = document.getElementById('phone')?.value || '';
-      const category = document.getElementById('category')?.value || '';
       const message = document.getElementById('enquiryMsg')?.value || '';
 
       // 1. Save user info to Supabase Database
@@ -153,7 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 last_name: lastName,
                 email: email,
                 phone: phone,
-                category: category,
                 message: message,
                 created_at: new Date().toISOString()
               }
