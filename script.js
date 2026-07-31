@@ -141,25 +141,32 @@ document.addEventListener('DOMContentLoaded', () => {
       const phone = document.getElementById('phone')?.value || '';
       const message = document.getElementById('enquiryMsg')?.value || '';
 
-      // 1. Save user info to Supabase Database
-      if (supabaseClient) {
-        try {
-          await supabaseClient
-            .from('enquiries')
-            .insert([
-              {
-                first_name: firstName,
-                last_name: lastName,
-                email: email,
-                phone: phone,
-                message: message,
-                created_at: new Date().toISOString()
-              }
-            ]);
+      // 1. Save user info to Supabase via direct REST API
+      try {
+        const supaRes = await fetch(`${SUPABASE_URL}/rest/v1/enquiries`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            first_name: firstName,
+            last_name: lastName,
+            email: email,
+            phone: phone,
+            message: message
+          })
+        });
+        if (!supaRes.ok) {
+          const errText = await supaRes.text();
+          console.error('Supabase REST Error:', supaRes.status, errText);
+        } else {
           console.log('User info saved to Supabase successfully.');
-        } catch (err) {
-          console.error('Supabase Save Error:', err);
         }
+      } catch (err) {
+        console.error('Supabase Save Error:', err);
       }
 
       // 2. Send email with documents via FormSubmit AJAX
