@@ -1,5 +1,10 @@
-User-agent: *
-
+﻿User-agent: *
 Allow: /
 
 Sitemap: https://drshivramkaranthlayout.com/sitemap.xml
+
+# Block common junk crawlers
+User-agent: AhrefsBot
+Crawl-delay: 10
+User-agent: SemrushBot
+Crawl-delay: 10
