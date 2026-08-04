@@ -223,6 +223,20 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 2px;
 }
 
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 38px;
+  }
+}
+
 .brand-text {
   display: flex;
   flex-direction: column;
