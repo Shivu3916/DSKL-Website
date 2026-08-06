@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('_captcha', 'false');
         formData.append('_template', 'table');
 
-        const response = await fetch('https://formsubmit.co/ajax/sanand@sandsprings.in', {
+        const response = await fetch('https://formsubmit.co/ajax/reach.dskl@gmail.com', {
           method: 'POST',
           body: formData
         });
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (gmailBtn) {
       const gmailSub = encodeURIComponent(`DSKL Application Documents - ${fullName}`);
       const gmailBody = encodeURIComponent(`Hello Bureau,\n\nPlease find attached my documents for the Dr. Shivram Karanth Layout application.\n\nApplicant Name: ${fullName}\nPhone Number: ${phoneVal}`);
-      gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=sanand%40sandsprings.in&su=${gmailSub}&body=${gmailBody}`;
+      gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=reach.dskl%40gmail.com&su=${gmailSub}&body=${gmailBody}`;
     }
   }
 
